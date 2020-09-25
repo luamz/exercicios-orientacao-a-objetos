@@ -11,5 +11,7 @@ package ex6;
 
 /* @author Luam */
 public class main {
-    
+    public static void main(String[] args) {
+        
+    }
 }
