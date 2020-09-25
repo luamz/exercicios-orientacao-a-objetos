@@ -3,10 +3,11 @@
 
 class Ex2 {
     public static void main(String[] args){
-        int cont = 0, num = 0;
+        int cont = 0;
+        int num = 0;
         System.out.println("Múltiplos de 3 entre 1 e 100:");
         while (num < 100){
-            System.out.print(" " + num + " ");
+            System.out.println(num);
             cont++;
             num = 3 * cont;
         }
