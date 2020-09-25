@@ -8,8 +8,7 @@ public class Ex6 {
         /* Criação dos vetores */
         Random aleatorio = new Random();
         
-         int vet1[] = new int[50];
-         int vet2[] = new int[50];
+         int vet1[] = new int[50],  vet2[] = new int[50];
          
          for (int i=0; i<50; i++) {
              vet1[i] = aleatorio.nextInt(100);
