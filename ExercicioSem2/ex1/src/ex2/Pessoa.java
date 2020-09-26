@@ -10,7 +10,6 @@ public class Pessoa {
     }
     
     void imprimir(){
-        System.out.println(nome);
-        System.out.println(idade);
+        System.out.print(nome +", "+ idade + " anos \n");
     }
 }

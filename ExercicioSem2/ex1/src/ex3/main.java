@@ -6,8 +6,8 @@ para devolver o rendimento mensal dessa conta. Implemente essa classe e teste-a,
 usando uma outra classe que tenha o main.
  */
 package ex3;
-
 /* @author Luam */
+
 public class main {
      public static void main(String[] args) {
          Conta conta = new Conta();

@@ -9,12 +9,12 @@ public class main {
         String nome = "Samuel";
         int num = 40028922;
         agenda.addContato(nome, num);
-        System.out.println("Contato adicionado!");
+        System.out.printf("%s foi adicionado(a) a sua agenda!\n", nome);
         
         String nome2 = "Rita";
         int num2 = 227038894;
         agenda.addContato(nome2, num2);
-        System.out.println("Contato adicionado!");
+        System.out.printf("%s foi adicionado(a) a sua agenda!\n", nome2);
         
         int total;
         total = agenda.totalContatos;

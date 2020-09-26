@@ -7,17 +7,21 @@ package ex5;
 public class main {
  public static void main(String[] args) {
      Casa casa = new Casa();
-     casa.portas[0] = new Porta();
-     casa.portas[1] = new Porta();
-     casa.portas[2] = new Porta();
+     casa.cor = "roxa";
      
-     casa.portas[0].estado= false;
-     casa.quantasAbertas();
+     Porta p1 = new Porta();
+     Porta p2 = new Porta();
+     Porta p3 = new Porta();
+    
+     p1.estado = true;
+     p2.estado = false;
+     p3.estado = true;
      
-     casa.portas[1].estado= false;
-     casa.quantasAbertas();
+     casa.addPortas(p1);
+     casa.addPortas(p2);
+     casa.addPortas(p3);
      
-     casa.portas[2].estado= false;
+     System.out.printf("A casa é %s e ", casa.cor );
      casa.quantasAbertas();
  }   
 }
