@@ -12,8 +12,8 @@ package ex6;
 /* @author Luam */
 public class TestaLampada {
     public static void main(String[] args) {
-        lamp lamp1 = new lamp();
-        lamp lamp2 = new lamp();
+        Lamp lamp1 = new Lamp();
+        Lamp lamp2 = new Lamp();
         
         lamp1.estado = "Ligada";
         lamp2.estado = "Desligada";
