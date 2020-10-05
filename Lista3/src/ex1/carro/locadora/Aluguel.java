@@ -1,6 +1,4 @@
 package ex1.carro.locadora;
-import ex1.Carro;
-
 /* @author Luam */
 
 public class Aluguel {

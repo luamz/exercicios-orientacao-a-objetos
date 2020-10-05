@@ -1,5 +1,5 @@
 package ex1.carro.revendedora;
-import ex1.Carro;
+
 /* @author Luam */
 
 public class Venda {

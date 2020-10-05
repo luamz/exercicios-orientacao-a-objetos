@@ -1,6 +1,4 @@
-
 package ex1.carro.detran;
-import ex1.Carro;
 
 /* @author Luam */
 public class Imposto {

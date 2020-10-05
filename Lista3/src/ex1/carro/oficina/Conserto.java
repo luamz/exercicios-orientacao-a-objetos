@@ -1,5 +1,4 @@
 package ex1.carro.oficina;
-import ex1.Carro;
 
 /* @author Luam  */
 public class Conserto {
