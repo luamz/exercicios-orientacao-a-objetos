@@ -41,7 +41,6 @@ public class Pais {
             }
         }
          return comuns;
-
     }
     
     public String getNome() {
