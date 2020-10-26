@@ -6,16 +6,20 @@ package br.uff.ic.poo.ex4;
 /* @author Luam */
 public class Main {
     public static void main(String[] args) {
-        Area a = new Area();
-        a.calcularArea(3);
-    
-        Area b = new Area();
-        b.calcularArea(3, 10, 4);
         
-        Area c = new Area();
-        c.calcularArea(10, 20, 3);
+        Retangulo a = new Retangulo("Verde", 3, 3);
+        a.calcularArea();
     
-        Area d = new Area();
-        d.calcularArea(5.0);
+        Retangulo b = new Retangulo("Azul", 3, 2);
+        b.calcularArea();
+        
+        Triangulo c = new Triangulo("Vermelho", 10, 20);
+        c.calcularArea();
+    
+        Circulo d = new Circulo("Preto", 5);
+        d.calcularArea();
+        
+        Figura e = new Figura("Roxo");
+        e.calcularArea();
     }
 }
