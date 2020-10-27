@@ -6,10 +6,9 @@ package br.uff.ic.poo.ex4;
 /* @author Luam */
 public class Main {
     public static void main(String[] args) {
-        
+
         Figura a = new Retangulo("Verde", 3, 3);
-        a.calcularArea();
-    
+        
         Figura b = new Retangulo("Azul", 3, 2);
         b.calcularArea();
         
