@@ -16,6 +16,7 @@ public class Main {
         Figura c = new Triangulo("Vermelho", 10, 20);
         c.calcularArea();
     
+        
         Figura d = new Circulo("Preto", 5);
         d.calcularArea();
         
