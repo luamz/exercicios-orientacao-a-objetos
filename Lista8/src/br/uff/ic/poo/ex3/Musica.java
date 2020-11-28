@@ -1,4 +1,4 @@
-package br.uff.poo.ic.ex3;
+package br.uff.ic.poo.ex3;
 
 public class Musica {
     protected String titulo;
