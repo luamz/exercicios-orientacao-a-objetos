@@ -1,6 +1,6 @@
 package br.uff.ic.poo.ex3;
 
-public class Musica {
+public class Musica implements Reproduzivel {
     protected String titulo;
     protected String artista;
     protected String[] letra;
@@ -12,6 +12,7 @@ public class Musica {
     }
 
     
+    @Override
     public void reproduzirMusica(){
         for(String estrofe: this.letra){
             System.out.println(estrofe);
