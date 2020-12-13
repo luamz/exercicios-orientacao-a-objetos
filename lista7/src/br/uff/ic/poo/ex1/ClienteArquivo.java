@@ -33,24 +33,21 @@ public class ClienteArquivo implements Serializable {
             
             ObjectInputStream obj = new ObjectInputStream(arq);
             aux = (Cliente)obj.readObject();
-            obj.close();
+                if(aux.getCpf().equals(CPF)){
+                    return aux;
+                }
             
+            obj.close();
             arq.close();
         }
         catch(FileNotFoundException e){
             e.getMessage();
         }
-        catch(IOException | ClassNotFoundException e){
+        catch(IOException | ClassNotFoundException | NullPointerException e){
             e.getMessage();
         }
+        return null;
         
-        
-        if (aux.getCpf().equals(CPF)){
-               return aux;
-        }
-        else{
-           throw new ClienteInexistenteException();
-        }
     }
         
     public static ArrayList<Cliente> buscarPorNome(String nome) throws ClienteInexistenteException{

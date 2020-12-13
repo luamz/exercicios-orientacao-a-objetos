@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 
 public class CadastroCliente {
     public static void inserirCliente(Cliente novo) throws RepositorioException, ClienteJaExistenteException {
-        if (buscarCPF(novo)){
+        if (buscarCPF(novo.cpf)){
          throw new ClienteJaExistenteException();  
         }
          else if (ClienteArquivo.contador<10){
@@ -29,15 +29,19 @@ public class CadastroCliente {
         return null;
     }
     
-    public static boolean buscarCPF(Cliente c) {
+    public static boolean buscarCPF(String cpf) {
         Cliente aux = null;
         try {
-            aux = ClienteArquivo.buscarPorCPF(c.getCpf());
+            aux = ClienteArquivo.buscarPorCPF(cpf);
+            return true;
         } catch (ClienteInexistenteException ex) {
             ex.getMessage();
         }
-        return aux.cpf.isEmpty();
+        return false;
     }
-
-  
+    
+    public static void removerCliente(String cpf) {
+        ClienteArquivo.excluir(cpf);
+        System.out.println("O cliente foi removido do sistema!!");
+    }
 }

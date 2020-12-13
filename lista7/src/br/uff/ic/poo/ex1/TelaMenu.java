@@ -15,44 +15,48 @@ public class TelaMenu {
                 "2 - Buscar cliente pelo nome\n" +
                 "3 - Buscar cliente pelo CPF\n" +
                 "4 - Excluir cliente\n" +
-                "5 - Listar cliente"
+                "5 - Listar clientes"
                 );
         
     }
     
     public static void main (String[] args) throws ClienteInexistenteException, RepositorioException{
-        Cliente a = new Cliente ("Angela","12345678210");
-        
-        try{
-            CadastroCliente.inserirCliente(a); 
-        }
-        catch(ClienteJaExistenteException | RepositorioException e1){
-            System.out.println(e1.getMessage());
-        }
-        
+
         Scanner teclado = new Scanner(System.in);
         TelaMenu.criaMenu();
 
 
         int op = teclado.nextInt();
+        teclado.nextLine();
         switch(op) {
             case 1:
             {
                 try {
-                    CadastroCliente.inserirCliente(a);
+                    System.out.println("Digite o nome: ");
+                    String nome = teclado.nextLine();
+                    System.out.println("Digite o cpf: ");
+                    String cpf = teclado.nextLine();
+                    CadastroCliente.inserirCliente(new Cliente (nome, cpf));
+                    System.out.println("O cliente foi inserido no sistema!!");
                 } catch (ClienteJaExistenteException ex) {
-                    Logger.getLogger(TelaMenu.class.getName()).log(Level.SEVERE, null, ex);
+                    ex.getMessage();
                 }
             }
               break;
             case 2:
-              CadastroCliente.buscarClienteNome(a.getNome());
+              System.out.println("Digite o nome: ");
+              String nome = teclado.nextLine();
+              CadastroCliente.buscarClienteNome(nome);
               break;
             case 3:
-              ClienteArquivo.buscarPorCPF(a.getCpf());
+              System.out.println("Digite o cpf: ");
+              String cpf = teclado.nextLine();
+              CadastroCliente.buscarCPF(cpf);
               break;
             case 4:
-              ClienteArquivo.excluir(a.getCpf());
+              System.out.println("Digite o cpf: ");
+              String cpf2 = teclado.nextLine();
+              CadastroCliente.removerCliente(cpf2);
               break;
             case 5:
               ArrayList<Cliente> lista =  ClienteArquivo.listar();
