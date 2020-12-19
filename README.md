@@ -1,3 +1,2 @@
-# ExerciciosPOO
-Exercicios realizados na disciplina de Programação Orientada a Objetos
-2020
+# Praticando os conceitos de Orientação a Objetos
+Exercicios realizados para praticar os principais conceitos de orientação a objetos
